@@ -1,0 +1,29 @@
+# ====================== DANH MỤC ======================
+WINDOWS_CATALOG = {
+    "Windows 11": {
+        "versions": ["21H2", "22H2", "23H2", "24H2"],
+        "editions": [
+            "Home","Pro","Pro for Workstations","Enterprise","Education","IoT Enterprise",
+        ],
+        "arch": ["x64", "ARM64"],
+    },
+}
+
+OFFICE_CATALOG = {
+    "Office 2024": {"suites": ["Home & Student 2024","Home & Business 2024","Professional 2024","LTSC Standard 2024 (VL)","LTSC Professional Plus 2024 (VL)"], "arch": ["x86","x64"]},
+}
+
+# ====================== ÁNH XẠ GOOGLE DRIVE (tối đa 10 LINK/FALLBACK) ======================
+DRIVE_MAP: Dict[Tuple[str, str, str, str], List[str]] = {
+    ("Windows 11", "24H2", "Pro", "x64"): [
+        "file:1PGRn88DN9UuPqG6teaSt_nfMabdwaQx1",
+        "folder:13Z3BmcRafNgGJ-IZoIi7E2mEyB12rdUR",
+        "file:1CCCCC_THIRD_ID",
+        # thêm tối đa 10 link nếu muốn...
+    ],
+    ("Office 2024", "", "LTSC Professional Plus 2024 (VL)", "x64"): [
+        "folder:1FOLDER_MAIN",
+        "folder:1FOLDER_MIRROR",
+        # thêm tối đa 10 link nếu muốn...
+    ],
+}
