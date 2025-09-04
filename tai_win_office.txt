@@ -1,5 +1,56 @@
 # ====================== DANH MỤC ======================
 WINDOWS_CATALOG = {
+    "Windows XP": {
+        "updates": ["RTM", "SP1", "SP2", "SP3"],
+        "editions": [
+            "Home",
+            "Professional",
+            "Media Center",
+            "Tablet PC",
+            "Starter",
+            "Professional x64 Edition",
+        ],
+        "arch": ["x86", "x64"],
+    },
+    "Windows Vista": {
+        "updates": ["RTM", "SP1", "SP2"],
+        "editions": [
+            "Starter",
+            "Home Basic",
+            "Home Premium",
+            "Business",
+            "Enterprise",
+            "Ultimate",
+        ],
+        "arch": ["x86", "x64"],
+    },
+    "Windows 7": {
+        "updates": ["SP1"],
+        "editions": [
+            "Starter",
+            "Home Basic",
+            "Home Premium",
+            "Professional",
+            "Enterprise",
+            "Ultimate",
+        ],
+        "arch": ["x86", "x64"],
+    },
+    "Windows 8.1": {
+        "updates": ["8.1", "8.1 Update"],
+        "editions": ["Core", "Pro", "Enterprise"],
+        "arch": ["x86", "x64"],
+    },
+    "Windows 10": {
+        "versions": [
+            "1507","1511","1607","1703","1709","1803","1809",
+            "1903","1909","2004","20H2","21H1","21H2","22H2",
+        ],
+        "editions": [
+            "Home","Pro","Pro for Workstations","Enterprise","Education","IoT Enterprise",
+        ],
+        "arch": ["x86", "x64", "ARM64"],
+    },
     "Windows 11": {
         "versions": ["21H2", "22H2", "23H2", "24H2"],
         "editions": [
@@ -10,20 +61,25 @@ WINDOWS_CATALOG = {
 }
 
 OFFICE_CATALOG = {
+    "Office 2003": {"suites": ["Basic","Standard","Small Business","Professional","Professional Enterprise","Student & Teacher"], "arch": ["x86"]},
+    "Office 2007": {"suites": ["Basic","Home & Student","Standard","Small Business","Professional","Professional Plus (VL)","Enterprise (VL)","Ultimate"], "arch": ["x86"]},
+    "Office 2010": {"suites": ["Starter","Home & Student","Home & Business","Standard (VL)","Professional","Professional Academic","Professional Plus (VL)"], "arch": ["x86","x64"]},
+    "Office 2013": {"suites": ["Home & Student","Home & Business","Standard (VL)","Professional","Professional Plus (VL)"], "arch": ["x86","x64"]},
+    "Office 2016": {"suites": ["Home & Student","Home & Business","Standard (VL)","Professional","Professional Plus (VL)"], "arch": ["x86","x64"]},
+    "Office 2019": {"suites": ["Home & Student 2019","Home & Business 2019","Standard 2019 (VL)","Professional 2019","Professional Plus 2019 (VL)"], "arch": ["x86","x64"]},
+    "Office 2021": {"suites": ["Home & Student 2021","Home & Business 2021","Standard 2021 (VL/LTSC)","Professional 2021","Professional Plus 2021 (VL/LTSC)"], "arch": ["x86","x64"]},
     "Office 2024": {"suites": ["Home & Student 2024","Home & Business 2024","Professional 2024","LTSC Standard 2024 (VL)","LTSC Professional Plus 2024 (VL)"], "arch": ["x86","x64"]},
 }
 
-# ====================== ÁNH XẠ GOOGLE DRIVE (tối đa 10 LINK/FALLBACK) ======================
+# ====================== ÁNH XẠ GOOGLE DRIVE (5 LINK/FALLBACK) ======================
 DRIVE_MAP: Dict[Tuple[str, str, str, str], List[str]] = {
     ("Windows 11", "24H2", "Pro", "x64"): [
-        "file:1PGRn88DN9UuPqG6teaSt_nfMabdwaQx1",
+        "file:1AAAAA_FIRST_ID",
         "folder:13Z3BmcRafNgGJ-IZoIi7E2mEyB12rdUR",
         "file:1CCCCC_THIRD_ID",
-        # thêm tối đa 10 link nếu muốn...
     ],
     ("Office 2024", "", "LTSC Professional Plus 2024 (VL)", "x64"): [
         "folder:1FOLDER_MAIN",
         "folder:1FOLDER_MIRROR",
-        # thêm tối đa 10 link nếu muốn...
     ],
 }
