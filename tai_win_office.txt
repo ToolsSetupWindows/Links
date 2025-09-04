@@ -1,85 +1,134 @@
-# ====================== DANH MỤC ======================
-WINDOWS_CATALOG = {
-    "Windows XP": {
-        "updates": ["RTM", "SP1", "SP2", "SP3"],
-        "editions": [
-            "Home",
-            "Professional",
-            "Media Center",
-            "Tablet PC",
-            "Starter",
-            "Professional x64 Edition",
-        ],
-        "arch": ["x86", "x64"],
-    },
-    "Windows Vista": {
-        "updates": ["RTM", "SP1", "SP2"],
-        "editions": [
-            "Starter",
-            "Home Basic",
-            "Home Premium",
-            "Business",
-            "Enterprise",
-            "Ultimate",
-        ],
-        "arch": ["x86", "x64"],
-    },
-    "Windows 7": {
-        "updates": ["SP1"],
-        "editions": [
-            "Starter",
-            "Home Basic",
-            "Home Premium",
-            "Professional",
-            "Enterprise",
-            "Ultimate",
-        ],
-        "arch": ["x86", "x64"],
-    },
-    "Windows 8.1": {
-        "updates": ["8.1", "8.1 Update"],
-        "editions": ["Core", "Pro", "Enterprise"],
-        "arch": ["x86", "x64"],
-    },
-    "Windows 10": {
-        "versions": [
-            "1507","1511","1607","1703","1709","1803","1809",
-            "1903","1909","2004","20H2","21H1","21H2","22H2",
-        ],
-        "editions": [
-            "Home","Pro","Pro for Workstations","Enterprise","Education","IoT Enterprise",
-        ],
-        "arch": ["x86", "x64", "ARM64"],
-    },
-    "Windows 11": {
-        "versions": ["21H2", "22H2", "23H2", "24H2"],
-        "editions": [
-            "Home","Pro","Pro for Workstations","Enterprise","Education","IoT Enterprise",
-        ],
-        "arch": ["x64", "ARM64"],
-    },
-}
+########################################################################
+# tai_win_office.txt — ĐỊNH DẠNG DÒNG (gọn, dễ sửa)
+#
+# Mỗi dòng = 1 bản ghi:
+#   Product | Version | Edition/Suite | Arch | link1, link2, ... (tối đa 10)
+#
+# Link chấp nhận:
+#   - file:<ID>           (tệp Google Drive)
+#   - folder:<ID>         (thư mục Google Drive)
+#   - URL Google Drive    (app tự rút ID)
+#   - <ID> thuần (bare)   → mặc định file:<ID>
+#
+# Ghi chú:
+#   - Dòng trống, dòng bắt đầu bằng '#' hoặc '//' sẽ bị bỏ qua.
+#   - Có thể comment cuối dòng sau ' #' hoặc ' //'.
+#   - Với Office: cột Version để trống → dùng "||".
+#   - App dùng tối đa 10 link theo thứ tự fallback (đầu tiên được ưu tiên).
+########################################################################
 
-OFFICE_CATALOG = {
-    "Office 2003": {"suites": ["Basic","Standard","Small Business","Professional","Professional Enterprise","Student & Teacher"], "arch": ["x86"]},
-    "Office 2007": {"suites": ["Basic","Home & Student","Standard","Small Business","Professional","Professional Plus (VL)","Enterprise (VL)","Ultimate"], "arch": ["x86"]},
-    "Office 2010": {"suites": ["Starter","Home & Student","Home & Business","Standard (VL)","Professional","Professional Academic","Professional Plus (VL)"], "arch": ["x86","x64"]},
-    "Office 2013": {"suites": ["Home & Student","Home & Business","Standard (VL)","Professional","Professional Plus (VL)"], "arch": ["x86","x64"]},
-    "Office 2016": {"suites": ["Home & Student","Home & Business","Standard (VL)","Professional","Professional Plus (VL)"], "arch": ["x86","x64"]},
-    "Office 2019": {"suites": ["Home & Student 2019","Home & Business 2019","Standard 2019 (VL)","Professional 2019","Professional Plus 2019 (VL)"], "arch": ["x86","x64"]},
-    "Office 2021": {"suites": ["Home & Student 2021","Home & Business 2021","Standard 2021 (VL/LTSC)","Professional 2021","Professional Plus 2021 (VL/LTSC)"], "arch": ["x86","x64"]},
-    "Office 2024": {"suites": ["Home & Student 2024","Home & Business 2024","Professional 2024","LTSC Standard 2024 (VL)","LTSC Professional Plus 2024 (VL)"], "arch": ["x86","x64"]},
-}
 
-# ====================== ÁNH XẠ GOOGLE DRIVE (5 LINK/FALLBACK) ======================
-DRIVE_MAP: Dict[Tuple[str, str, str, str], List[str]] = {
-    ("Windows 11", "24H2", "Pro", "x64"): [
-        "file:1AAAAA_FIRST_ID",
-        "folder:13Z3BmcRafNgGJ-IZoIi7E2mEyB12rdUR",
-        "file:1CCCCC_THIRD_ID",
-    ],
-    ("Office 2024", "", "LTSC Professional Plus 2024 (VL)", "x64"): [
-        "folder:1FOLDER_MAIN",
-        "folder:1FOLDER_MIRROR",
-    ],
-}
+############################
+# ===== WINDOWS XP =====
+############################
+Windows XP | RTM | Home                         | x86 | file:REPLACE_ME_WINXP_RTM_HOME_X86
+Windows XP | SP3 | Professional                 | x86 | REPLACE_ME_WINXP_SP3_PRO_X86
+Windows XP | SP3 | Professional x64 Edition     | x64 | https://drive.google.com/file/d/REPLACE_ME_WINXP_SP3_PRO_X64/view
+Windows XP | SP2 | Media Center                 | x86 | file:REPLACE_ME_WINXP_SP2_MCE_X86
+
+############################
+# ===== WINDOWS VISTA =====
+############################
+Windows Vista | SP2 | Starter                   | x86 | file:REPLACE_ME_VISTA_SP2_STARTER_X86
+Windows Vista | SP2 | Home Premium              | x64 | REPLACE_ME_VISTA_SP2_HPREM_X64
+Windows Vista | SP2 | Ultimate                  | x64 | https://drive.google.com/drive/folders/REPLACE_ME_VISTA_SP2_ULT_X64
+
+############################
+# ===== WINDOWS 7 =====
+############################
+Windows 7 | SP1 | Home Premium                  | x86 | file:REPLACE_ME_WIN7_SP1_HPREM_X86
+Windows 7 | SP1 | Professional                  | x64 | REPLACE_ME_WIN7_SP1_PRO_X64
+Windows 7 | SP1 | Enterprise                    | x64 | folder:REPLACE_ME_WIN7_SP1_ENT_X64
+Windows 7 | SP1 | Ultimate                      | x86 | file:REPLACE_ME_WIN7_SP1_ULT_X86
+
+############################
+# ===== WINDOWS 8.1 =====
+############################
+Windows 8.1 | 8.1         | Core                | x86 | file:REPLACE_ME_WIN81_CORE_X86
+Windows 8.1 | 8.1 Update  | Pro                 | x64 | REPLACE_ME_WIN81_UPDATE_PRO_X64
+Windows 8.1 | 8.1 Update  | Enterprise          | x64 | https://drive.google.com/file/d/REPLACE_ME_WIN81_UPDATE_ENT_X64/view
+
+############################
+# ===== WINDOWS 10 =====
+############################
+Windows 10 | 22H2 | Home                        | x86   | file:REPLACE_ME_WIN10_22H2_HOME_X86
+Windows 10 | 22H2 | Pro                         | x64   | file:REPLACE_ME_WIN10_22H2_PRO_X64, folder:REPLACE_ME_WIN10_22H2_PRO_X64_MIRROR
+Windows 10 | 22H2 | Enterprise                  | x64   | folder:REPLACE_ME_WIN10_22H2_ENT_X64
+Windows 10 | 21H2 | Pro for Workstations        | x64   | file:REPLACE_ME_WIN10_21H2_PFW_X64
+Windows 10 | 20H2 | Education                   | x64   | REPLACE_ME_WIN10_20H2_EDU_X64
+Windows 10 | 1909 | IoT Enterprise              | ARM64 | file:REPLACE_ME_WIN10_1909_IOT_ARM64
+
+############################
+# ===== WINDOWS 11 =====
+############################
+# Dòng có link thật (theo mẫu bạn đã dùng)
+Windows 11 | 24H2 | Pro                         | x64 | file:1AAAAA_FIRST_ID, folder:13Z3BmcRafNgGJ-IZoIi7E2mEyB12rdUR, file:1CCCCC_THIRD_ID
+
+# Thêm ví dụ khác
+Windows 11 | 23H2 | Enterprise                  | ARM64 | https://drive.google.com/drive/folders/REPLACE_ME_WIN11_23H2_ENT_ARM64
+Windows 11 | 21H2 | Home                        | x64   | file:REPLACE_ME_WIN11_21H2_HOME_X64
+
+
+#######################################################################
+# =========================== OFFICE ================================
+# LƯU Ý: Với Office, cột Version để trống → dùng "||"
+#######################################################################
+
+############################
+# ===== OFFICE 2003 =====
+############################
+Office 2003 || Standard                         | x86 | file:REPLACE_ME_OFFICE2003_STD_X86
+Office 2003 || Professional                     | x86 | REPLACE_ME_OFFICE2003_PRO_X86
+
+############################
+# ===== OFFICE 2007 =====
+############################
+Office 2007 || Home & Student                   | x86 | file:REPLACE_ME_OFFICE2007_HS_X86
+Office 2007 || Ultimate                         | x86 | REPLACE_ME_OFFICE2007_ULT_X86
+
+############################
+# ===== OFFICE 2010 =====
+############################
+Office 2010 || Professional                     | x86 | file:REPLACE_ME_OFFICE2010_PRO_X86
+Office 2010 || Professional Plus (VL)           | x64 | REPLACE_ME_OFFICE2010_PP_VL_X64
+
+############################
+# ===== OFFICE 2013 =====
+############################
+Office 2013 || Home & Business                  | x86 | file:REPLACE_ME_OFFICE2013_HB_X86
+Office 2013 || Professional Plus (VL)           | x64 | REPLACE_ME_OFFICE2013_PP_VL_X64
+
+############################
+# ===== OFFICE 2016 =====
+############################
+Office 2016 || Professional                     | x86 | file:REPLACE_ME_OFFICE2016_PRO_X86
+Office 2016 || Professional Plus (VL)           | x64 | REPLACE_ME_OFFICE2016_PP_VL_X64
+
+############################
+# ===== OFFICE 2019 =====
+############################
+Office 2019 || Professional Plus 2019 (VL)      | x64 | file:REPLACE_ME_OFFICE2019_PP_VL_X64
+
+############################
+# ===== OFFICE 2021 =====
+############################
+Office 2021 || Standard 2021 (VL/LTSC)          | x86 | file:REPLACE_ME_OFFICE2021_STD_VL_X86
+Office 2021 || Professional Plus 2021 (VL/LTSC) | x64 | REPLACE_ME_OFFICE2021_PP_VL_X64
+
+############################
+# ===== OFFICE 2024 =====
+############################
+# Dòng có link thật (theo mẫu bạn đã dùng)
+Office 2024 || LTSC Professional Plus 2024 (VL) | x64 | folder:1FOLDER_MAIN, folder:1FOLDER_MIRROR
+
+# Thêm ví dụ khác
+Office 2024 || Home & Business 2024             | x86 | file:REPLACE_ME_OFFICE2024_HB_X86
+Office 2024 || Professional 2024                | x64 | REPLACE_ME_OFFICE2024_PRO_X64
+
+
+#######################################################################
+# Ví dụ 1 dòng có NHIỀU MIRROR (tối đa 10; có thể trộn dấu , ; và khoảng trắng)
+#######################################################################
+Windows 10 | 22H2 | Pro                         | x64 | file:ID_A, file:ID_B; folder:ID_C https://drive.google.com/file/d/ID_D/view ; ID_E, ID_F, ID_G, ID_H, ID_I
+
+# Hết.
