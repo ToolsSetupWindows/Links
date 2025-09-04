@@ -21,7 +21,7 @@
 ############################
 # ===== WINDOWS XP =====
 ############################
-Windows XP | RTM | Home                         | x86 | file:1W-0UhNXcuWdjJ-mh3gdbUjw3hsoc8IS4
+Windows XP | RTM | Home                         | x86 | file:1W-0UhNXcuWdjJ-mh3gdbUjw3hsoc8IS3, file:1W-0UhNXcuWdjJ-mh3gdbUjw3hsoc8IS4
 Windows XP | SP3 | Professional                 | x86 | REPLACE_ME_WINXP_SP3_PRO_X86
 Windows XP | SP3 | Professional x64 Edition     | x64 | https://drive.google.com/file/d/REPLACE_ME_WINXP_SP3_PRO_X64/view
 Windows XP | SP2 | Media Center                 | x86 | file:REPLACE_ME_WINXP_SP2_MCE_X86
