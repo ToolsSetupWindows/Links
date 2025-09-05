@@ -62,7 +62,7 @@ Windows 10 | 1909 | IoT Enterprise              | ARM64 | file:REPLACE_ME_WIN10_
 # ===== WINDOWS 11 =====
 ############################
 # Dòng có link thật (theo mẫu bạn đã dùng)
-Windows 11 | 24H2 | Pro                         | x64 | file:1AAAAA_FIRST_ID, folder:13Z3BmcRafNgGJ-IZoIi7E2mEyB12rdUR, file:1CCCCC_THIRD_ID
+Windows 11 | 24H2 | Business (Edu/Enterprise/Pro/Workstations)                         | x64 | file:1AAAAA_FIRST_ID, folder:13Z3BmcRafNgGJ-IZoIi7E2mEyB12rdUR, file:1CCCCC_THIRD_ID
 
 # Thêm ví dụ khác
 Windows 11 | 23H2 | Enterprise                  | ARM64 | https://drive.google.com/drive/folders/REPLACE_ME_WIN11_23H2_ENT_ARM64
