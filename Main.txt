@@ -1,1 +1,2 @@
 install_software.exe;https://raw.githubusercontent.com/ToolsSetupWindows/File/main/install_software.exe;40003970
+install_office.exe;https://raw.githubusercontent.com/ToolsSetupWindows/File/main/install_software.exe;37887790
