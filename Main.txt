@@ -1,1 +1,1 @@
-Start.exe;https://github.com/ToolsSetupWindows/Links/raw/refs/heads/main/Start.exe;11415165
+install_software.exe;https://raw.githubusercontent.com/ToolsSetupWindows/File/main/install_software.exe;40003970
