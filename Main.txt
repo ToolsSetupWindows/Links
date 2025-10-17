@@ -1,1 +1,1 @@
-install_office.exe;https://raw.githubusercontent.com/ToolsSetupWindows/File/main/install_office.exe;37887581
+Wub.zip;https://github.com/ToolsSetupWindows/ToolsSetupWindows/releases/download/Windows_Update_Blocker/Wub.zip;1089667
