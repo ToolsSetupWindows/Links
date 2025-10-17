@@ -1,1 +1,1 @@
-Unikey.exe;https://github.com/ToolsSetupWindows/Links/raw/refs/heads/main/Unikey.exe;5900500
+Unikey.exe;https://github.com/ToolsSetupWindows/Links/raw/refs/heads/main/Unikey.exe;1035776
