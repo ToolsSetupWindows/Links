@@ -1,1 +1,2 @@
 Wub.zip;https://github.com/ToolsSetupWindows/ToolsSetupWindows/releases/download/Windows_Update_Blocker/Wub.zip;1089667
+Defender.zip;https://github.com/ToolsSetupWindows/ToolsSetupWindows/releases/download/Defender_Control/Defender.zip;458170
