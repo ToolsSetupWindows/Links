@@ -1,4 +1,6 @@
 Wub.zip;https://github.com/ToolsSetupWindows/ToolsSetupWindows/releases/download/Windows_Update_Blocker/Wub.zip;1089667
+WinNTSetup.zip;https://github.com/ToolsSetupWindows/ToolsSetupWindows/releases/download/WinNTSetup/WinNTSetup.zip;3664348
+WinToHDD.zip;https://github.com/ToolsSetupWindows/ToolsSetupWindows/releases/download/WinToHDD/WinToHDD.zip;8715364
 Defender.zip;https://github.com/ToolsSetupWindows/ToolsSetupWindows/releases/download/Defender_Control/Defender.zip;458170
 TestMem5.zip;https://github.com/ToolsSetupWindows/ToolsSetupWindows/releases/download/TestMem5/TestMem5.zip;52918
 DPB.zip;https://github.com/ToolsSetupWindows/ToolsSetupWindows/releases/download/Dead_Pixel_Buddy/DPB.zip;26599
