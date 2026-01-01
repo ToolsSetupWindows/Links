@@ -1,1 +1,1 @@
-Unikey.exe;https://github.com/ToolsSetupWindows/Links/raw/refs/heads/main/Unikey.exe;1035776
+LinkAFF.exe;https://github.com/ToolsSetupWindows/Links/raw/refs/heads/main/LinkAFF.exe;1157120
