@@ -1,1 +1,1 @@
-LinkAFF.exe;https://github.com/ToolsSetupWindows/Links/raw/refs/heads/main/LinkAFF.exe;1034240
+LinkAFF.exe;https://github.com/ToolsSetupWindows/Links/raw/refs/heads/main/LinkAFF.exe;988672
